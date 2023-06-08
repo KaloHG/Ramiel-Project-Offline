@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "ramiel",
+  "version": "${version}",
+  "name": "Ramiel-Project",
+  "description": "One Psyche Ward Visit and Twelve Beers Later...",
+  "authors": ["Kallos"],
+  "contact": {
+    "repo": "https://google.com"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/Ramiel/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "gov.kallos.ramiel.client.RamielClient"
+    ],
+    "main": [
+      "gov.kallos.ramiel.Ramiel"
+    ]
+  },
+  "mixins": [
+    "Ramiel-Project.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "vertex": "shaders/post/outline_vertex.glsl",
+  "fragment": "shaders/post/outline_fragment.glsl",
+  "samplers": {
+    "DiffuseSampler": {
+      "index": 0,
+      "useTexture": true,
+      "filter": "linear",
+      "wrap": "clamp"
+    }
+  },
+  "attributes": {
+    "Position": {
+      "type": "vec3",
+      "index": 0
+    },
+    "UV": {
+      "type": "vec2",
+      "index": 1
+    },
+    "Color": {
+      "type": "vec4",
+      "index": 2
+    }
+  },
+  "uniforms": {
+    "ProjMat": "mat4",
+    "ModelViewMat": "mat4",
+    "ColorMultiplier": "vec4"
+  },
+  "passes": [
+    {
+      "name": "default",
+      "vertex": "Default",
+      "fragment": "Default",
+      "depth": {
+        "write": false,
+        "test": "greater",
+        "func": "equal"
+      },
+      "blend": {
+        "enabled": true,
+        "srcRgb": "src_alpha",
+        "srcAlpha": "src_alpha",
+        "dstRgb": "one_minus_src_alpha",
+        "dstAlpha": "one_minus_src_alpha"
+      },
+      "draw": "fullscreen"
+    }
+  ]
+}
