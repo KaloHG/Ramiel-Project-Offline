@@ -1,5 +1,6 @@
 # Ramiel Mod
 Fabric 1.18.2 Mod that shows and remembers player locations with added support for [JukeAlert](https://github.com/CivMC/JukeAlert). 
+Developed by Laika0xC1 and DockerImage for CitadelPvP.
 
 ## Ramiel Features
 Ramiel has a variety of features intended for PvP coordination. 
